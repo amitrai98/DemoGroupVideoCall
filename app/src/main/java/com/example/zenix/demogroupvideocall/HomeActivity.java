@@ -1,6 +1,7 @@
 package com.example.zenix.demogroupvideocall;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
 public class HomeActivity extends BaseAcitvity {
 
@@ -12,7 +13,8 @@ public class HomeActivity extends BaseAcitvity {
 
     @Override
     protected void initViews() {
-
+        Fragment fragment = HomeFragment.newInstance("","");
+        replaceFragment(fragment, R.id.dashboard_content);
     }
 
     @Override
