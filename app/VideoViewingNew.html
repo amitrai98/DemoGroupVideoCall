@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#publisherContainer {
+    width: 500px;
+    height: 500px;
+    border: 3px solid #73AD21;
+	  text-align: center;
+    margin: auto;
+    display: none;
+}
+
+body {
+    background-color: lightblue;
+}
+</style> 
+<script src="https://static.opentok.com/v2/js/opentok.js" charset="utf-8"></script>
+    <script charset="utf-8">
+      
+     var session;
+        
+          var apiKey = '45598312';
+      var sessionId = '2_MX40NTU5ODMxMn5-MTQ3MTM0NTM5NDg2MH5VRnl4RC8yODBYTCt1Y3dBQ0hrVEVHY0x-fg';
+      var token = 'T1==cGFydG5lcl9pZD00NTU5ODMxMiZzaWc9YTViNWZmZjRmYTY2OTJlNzAxMWU0ZWFjZTBiYTJjMTQxOGYwMzAwZTpzZXNzaW9uX2lkPTJfTVg0ME5UVTVPRE14TW41LU1UUTNNVE0wTlRNNU5EZzJNSDVWUm5sNFJDOHlPREJZVEN0MVkzZEJRMGhyVkVWSFkweC1mZyZjcmVhdGVfdGltZT0xNDcyMDQzNDU1Jm5vbmNlPTAuNzkzNDcwMjQ5NTExMzAxNSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc0NjM1NDUw';
+			
+   function openList1(val) {
+
+   alert(val);
+
+   
+    
+  
+   
+
+   if (val == 2) {
+console.log(2);
+    apiKey = '45598312';
+      sessionId = '1_MX40NTU5ODMxMn5-MTQ3NDAyODg1NDE2MX5rOW40Ti9wNmZteGRyNDluUmhONDVJZHB-fg';
+       token = 'T1==cGFydG5lcl9pZD00NTU5ODMxMiZzaWc9NGE1NDhhMGVhMmFmZjc2ZTM5OGZjYmI0YmU5MjMxZDYxOGY5ZDYwZDpzZXNzaW9uX2lkPTFfTVg0ME5UVTVPRE14TW41LU1UUTNOREF5T0RnMU5ERTJNWDVyT1c0MFRpOXdObVp0ZUdSeU5EbHVVbWhPTkRWSlpIQi1mZyZjcmVhdGVfdGltZT0xNDc0MDI4ODc2Jm5vbmNlPTAuNjA4NDY5MTQxODgwMDUwMyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc2NjIwNzk3';
+   }
+
+   else if (val == 3) {
+console.log(3);
+     apiKey = '45598312';
+       sessionId = '2_MX40NTU5ODMxMn5-MTQ3NDAyODg5NzEzNH5FbW42eTkxTVlNcHl3eXF2Smk0YlRHRUF-fg';
+      token = 'T1==cGFydG5lcl9pZD00NTU5ODMxMiZzaWc9MDBlY2NkNjE4YzU0MjFhODY5MDJhMTc0MDFjMzZhNTdjM2NkMWNmNDpzZXNzaW9uX2lkPTFfTVg0ME5UVTVPRE14TW41LTJfTVg0ME5UVTVPRE14TW41LU1UUTNOREF5T0RnNU56RXpOSDVGYlc0MmVUa3hUVmxOY0hsM2VYRjJTbWswWWxSSFJVRi1mZy1mZyZjcmVhdGVfdGltZT0xNDc0MDI4OTIwJm5vbmNlPTAuNzQyODcxNjAzOTI4NTA2NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc2NjIwODQx';
+   }
+   
+   else if (val == 4) {
+
+    apiKey = '45598312';
+       sessionId = '1_MX40NTU5ODMxMn5-MTQ3NDAyODkzOTE0NH5TczNoS2hHTEcrbGpvQ0F1eXc0NmtuUmd-fg';
+      token = 'T1==cGFydG5lcl9pZD00NTU5ODMxMiZzaWc9MzEwOThiYWY1MGU4MmI4NGViMjgwZGJiMzExZWI3ZGJmMjI3NzdmYjpzZXNzaW9uX2lkPTFfTVg0ME5UVTVPRE14TW41LU1UUTNOREF5T0Rrek9URTBOSDVUY3pOb1MyaEhURWNyYkdwdlEwRjFlWGMwTm10dVVtZC1mZyZjcmVhdGVfdGltZT0xNDc0MDI4OTU0Jm5vbmNlPTAuNzI0Mjc5MTMyOTA0NDg0OSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc2NjIwODc1';
+   }
+   else if (val == 5) {
+
+     apiKey = '45598312';
+       sessionId = '1_MX40NTU5ODMxMn5-MTQ3NDAyODk3NzQ0Mn5RT004THhVYmUwMmdKTkg0MklXdnI2QkR-fg';
+       token = 'T1==cGFydG5lcl9pZD00NTU5ODMxMiZzaWc9ZTQ1MjM1YTIyYjQxNDNlNjkzZDY0NTA0ZjhjMmRiZDNkYTI4NDRhNzpzZXNzaW9uX2lkPTFfTVg0ME5UVTVPRE14TW41LU1UUTNOREF5T0RrM056UTBNbjVSVDAwNFRIaFZZbVV3TW1kS1RrZzBNa2xYZG5JMlFrUi1mZyZjcmVhdGVfdGltZT0xNDc0MDI4OTk0Jm5vbmNlPTAuODYxMDQzNDY1Nzg5NDA3NSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc2NjIwOTE2';
+   }
+   var list = document.getElementById("ollist");
+   
+   document.getElementById("publisherContainer").style.display = "block";
+       
+   if (list.style.display == "none"){
+        list.style.display = "block";
+        
+        
+    }else{
+
+        list.style.display = "none";
+
+    }
+    console.log("sdfsdjfiksd = ",apiKey);
+   myFunction();
+}
+
+
+             function myFunction() {
+              console.log(apiKey);
+            session = OT.initSession(apiKey, sessionId).on('streamCreated', function(event) {
+                console.log(event.stream.streamId);
+               
+                
+		var options = {width: 500, height: 500, insertMode: 'append'};
+                session.subscribe(event.stream,'publisherContainer',options);
+  
+                
+                
+                })
+                .connect(token, function(error) {
+                         
+                         });
+         }
+function myFunctiona() {
+document.getElementById("streamid").value = "";
+session.disconnect();
+}
+
+        
+    </script>
+</head>
+  <body>
+
+<div id="publisherContainer" ></div>
+
+<ol id="ollist">
+ <li><p  onclick = "openList1(1)" >User1</p></li>
+ <li><p  onclick = "openList1(2)">User2</p></li>
+ <li><p  onclick = "openList1(3)">User3</p></li>
+ <li><p  onclick = "openList1(4)">User4</p></li>
+ <li><p  onclick = "openList1(5)">User5</p></li>
+  
+</ol> 
+    
+  </body>
+</html>
